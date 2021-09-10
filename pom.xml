@@ -85,7 +85,7 @@
 					<!-- <suiteXmlFiles> TestNG suite XML files <suiteXmlFile>testng.xml</suiteXmlFile> 
 						</suiteXmlFiles> -->
 					<includes>
-						<include>com.mine.vj.learningSpringBoot.SpringBootTestNG</include>
+						<include>com.mine.vj.learningSpringBoot.runner.TestRunner</include>
 					</includes>
 				</configuration>
 			</plugin>

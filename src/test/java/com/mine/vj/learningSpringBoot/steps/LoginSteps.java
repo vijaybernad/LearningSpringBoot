@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
 
+import com.mine.vj.learningSpringBoot.models.TestUserDetails;
+import com.mine.vj.learningSpringBoot.models.UserDetails;
 import com.mine.vj.learningSpringBoot.pages.HomePage;
 import com.mine.vj.learningSpringBoot.pages.LoginPage;
 
@@ -20,17 +22,17 @@ public class LoginSteps {
 
 	@Autowired
 	public LoginPage loginPage;
+	
+	@Autowired
+	public TestUserDetails testuserDetails;
 
 	@Given("I navigate to the login page")
 	public void iNavigateToTheLoginPage() {
 		homePage.ClickLogin();
+		testuserDetails.setUserDetails(new UserDetails("sample", "Sample@12"));
 	}
 
-	@And("I enter the following for Login")
-	public void iEnterTheFollowingForLogin(DataTable table) {
-		List<String> data = table.asList();
-		loginPage.Login(data.get(2), data.get(3));
-	}
+	
 
 	@And("I click login button")
 	public void iClickLoginButton() {
