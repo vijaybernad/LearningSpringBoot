@@ -1,10 +1,12 @@
 package com.mine.vj.learningSpringBoot;
 
+
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -41,4 +43,10 @@ public class SpringBootTestNG extends AbstractTestNGSpringContextTests {
 	protected void springTestContextPrepareTestInstance() throws Exception {
 		super.springTestContextPrepareTestInstance();
 	}
+	
+	@AfterClass
+	public void cleanUp() {
+		
+	}
+	
 }
